@@ -1,0 +1,75 @@
+header{
+    background-color: #0064FB;
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    transition: transform .5s ease;
+}
+
+#logo{
+    font-size: 15pt;
+    font-weight: bold
+}
+
+nav{
+    text-align: center;
+    margin-top: 40px;
+    font-family: 'Baloo 2', cursive;
+}
+
+nav a{
+    margin: 0 50px 10px 0;
+    padding: 0 0 10px 0;
+    font-size: 13pt;
+    position: relative;
+}
+
+a:not(.flex.footer > div > a, div.buttom > a, .cardb, .wpp){
+    padding: 0 0 10px 0;
+    font-size: 13pt;
+    position: relative;
+}
+
+div.buttom > a{
+    padding: 0 0 10px 0;
+    position: relative;
+}
+
+a:hover{
+    color: #e6e6e6;
+}
+
+nav a::after, a:not(.flex.footer > div > a, div.item-text.main > a.mainbuttom, .cardb, .wpp)::after{
+    content: " ";
+    width: 0%;
+    height: 2px;
+    background-color: #F5F5F5;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    border-radius: 100%;
+    transition: 0.3s ease-in-out;
+}
+
+nav a:hover::after, a:not(.flex.footer > div > a):hover::after{
+    width: 100%;
+}
+
+.scrolling-active{
+    box-shadow: 0 3px 1rem rgba(0,0,0,.1);
+    transform: translateY(-25px);
+    padding-bottom: 15px;
+}
+
+.scrolling-active .nav{
+    height: 6.6rem;
+}
+
+.scrolling-active .nav a{
+    color: #313131;
+}
+
+#btn-mobile{
+    display: none;
+}
+

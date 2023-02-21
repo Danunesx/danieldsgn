@@ -1,0 +1,148 @@
+@media screen and (max-width: 700px){
+    header{
+        height: 13vh;
+    }
+    header.active1{
+        height: 100vh;
+        transition: .5s ease-in-out;
+    }
+
+    nav > #btn-mobile{
+        display: flex;
+        float: right;
+        margin-right: 10%;
+        cursor: pointer;
+        font-size: 15pt;
+        margin-top: 1.5%;
+    }
+
+    #hamburguer{
+        color: #f5f5f5;
+        border-top: 2px solid;
+        width: 20px;
+    }
+    #hamburguer::after, #hamburguer::before{
+        width: 20px;
+        height: 2px;
+        content: '';
+        background: currentColor;
+        display: block;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+
+    #nav.active #hamburguer{
+        border-top-color: transparent;
+    }
+
+    #nav.active #hamburguer::after{
+        transform: rotate(135deg);
+        top: -7px;
+    }
+
+    #nav.active #hamburguer::before{
+        transform: rotate(-135deg);
+    }
+
+
+    nav > a#line{
+        display: block;
+        margin: 0 0 40px 0;
+        transition: .3s ease-in;
+        height: 0vh;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    #nav.active a#line{
+        visibility: visible;
+        height: 5vh;
+    }
+
+    #logo{
+        right: 20%;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 610px){
+
+    .item-img > img {
+        max-width: 100%;
+    }
+
+    #Sobre p {
+        text-align: justify;
+        margin: 2% 0 6% 0;
+        font-size: 80%;
+    }
+
+    #Sobre div.flexbox.-text > h1 {
+        margin: 0;
+    }
+
+    .heart{
+        visibility: hidden;
+    }
+}
+
+
+@media screen and (max-width: 400px){
+    .flex.service > div, .flex.jobs > div {
+        margin: 10px 35px;
+    }
+
+    .item-text.main {
+        margin-top: 10vh;
+        text-align: left;
+    }
+
+    .img--{
+        padding-left: 10%;
+        transform: translate(0px, -50px);
+    }
+
+    .footerbox{
+        padding-left: 10%;
+    }
+
+    .footerbox.logos.b{
+        text-align: center;
+        padding: 5% 0 0 0;
+    }
+
+    .footerbox.links{
+        width: 30%;
+        float: right;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .flex.footer > div {
+        flex: 1 1 190px;
+    }
+
+    .titulo{
+        line-height: 30pt;
+    }
+
+    .grid{
+        grid-template-columns: repeat(1, 1fr);
+        margin: 10px 35px 0px 35px;
+    }
+
+    #seta{
+        visibility: hidden;
+    }
+
+    .grid.about-me > .flexbox {
+        height: 385px;
+    }
+
+    .item-text {
+        text-align: center;
+        margin: 0;
+    }
+
+}
